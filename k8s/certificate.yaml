@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+  
+kind: Certificate
+metadata:
+  name: doanhuuhoa-com-tls
+spec:
+  secretName: doanhuuhoa-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: doanhuuhoa.com
+  dnsNames:
+    - doanhuuhoa.com
+    - www.doanhuuhoa.com
